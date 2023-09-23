@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    {% block title %}
+    {% endblock %}
+   
+    <link type="image/png" sizes="32x32" rel="icon" href="/media/favicon.png">
+    
+</head>
+<body>
+    <header>
+        <nav class="topnav">            
+            <a class="active" href="/">Home</a>
+            <a href="/lab-rules/">Lab Rules</a>
+            <a href="/tutorials/">Tutorials</a>
+            <a href="/experiment-lists/">Experiment Lists</a>
+        </nav>
+        <h1 class="top-header">Lab Portal</h1>
+        <hr>
+    </header>        
+    
+    {% block content %}
+    
+    {% endblock %}
+
+</body>
+</html>
