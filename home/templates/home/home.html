@@ -5,5 +5,46 @@
 {% endblock %}
 
 {% block content %}
+<h2>Upload experiment lists</h2>
+<form action="exp_upload" method="post">
+    {% csrf_token %}
+<fieldset>
+    <legend>Experiment Details</legend>
+    <label for="subject">Subject Name
+        <select name="subject" id="subject" required>
+            <option value="pps">PPS</option>
+            <option value="pp">PP</option>
+        </select>
+    </label>    
+
+    <label for="exp-no">Exp Number
+        <input type="number" min="1" max="15" name="exp-no" id="exp-no" required>
+    </label>
+    
+    <label for="sem">Semister
+        <input type="number" min="1" max="8" name="sem" id="sem" required>
+    </label>        
+
+    <label for="dt">Submit Date
+        <input type="date" name="dt" id="dt" required>
+    </label>
+    <br>
+
+    <label for="file">File Upload
+        <input type="file" name="file" id="file" required>
+    </label>
+    <br>
+
+    <label for="faculty">Submitted By
+        <input type="text" name="faculty" id="faculty" required>
+    </label>
+    
+    <label for="password">Submit Password
+        <input type="password" name="password" id="password" required>
+    </label>
+
+    <input type="submit" value="Submit">
+</fieldset>
+</form>
 
 {% endblock %}
